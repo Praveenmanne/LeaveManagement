@@ -137,23 +137,21 @@ namespace EmployeeScreen.EmployeeScreen
 
                             newItem.Update();
 
-                      //      SPListItem item = properties.ListItem;
-                        //    var createdByLeaveRequest = new SPFieldUserValue(properties.Web, item["Created By"].ToString());
-
                             var leavelist = web.Lists.TryGetList(Utilities.LeaveDays);
                             var field = leavelist.Fields["Employee Type"];
                             var leaveDaysQuery = new SPQuery()
                             {
                                 Query = @"<Where>
-                                                            <Eq>
-                                                        <FieldRef Name='" + field.InternalName + @"' />
-                                                                     <Value Type='Lookup'>" + DdlEmptype.SelectedItem.Text + @"</Value>
-                                                            </Eq>
+                                                <Eq>
+                                                    <FieldRef Name='" + field.InternalName + @"' />
+                                                    <Value Type='Lookup'>" + DdlEmptype.SelectedItem.Text + @"</Value>
+                                                    </Eq>
                                                      </Where>"
 
                             };
                             var leaveDayscollection = leavelist.GetItems(leaveDaysQuery);
-
+                            int currentMonth = DateTime.Now.Month;
+                            int monthDiff = GetMonthDifference(currentMonth);
                             foreach (SPListItem leaveType in leaveDayscollection)
                             
                             {
@@ -165,7 +163,11 @@ namespace EmployeeScreen.EmployeeScreen
                                 empLeaveItem["Employee ID"] = txtempid.Text;
                                 empLeaveItem[Utilities.EmployeeName] = web.AllUsers[peoplepickeremp.Accounts[0].ToString()];
                                 empLeaveItem["Leave Type"] = leaveType["Leave Type"].ToString();
-                                empLeaveItem["Leave Balance"] = leaveType["Leave Days"].ToString();
+                                if (leaveType["Leave Type"].ToString() == "Permanent")
+                                    empLeaveItem["Leave Balance"] = decimal.Parse(leaveType["Leave Days"].ToString()) * monthDiff;
+                                else
+                                    empLeaveItem["Leave Balance"] = decimal.Parse(leaveType["Leave Days"].ToString())*6;
+
                                 empLeaveItem["Leave utilized"] = 0;
                                 empLeaveItem["Leave Requested"] = 0;
 
@@ -194,6 +196,19 @@ namespace EmployeeScreen.EmployeeScreen
 
         }
 
+        private int GetMonthDifference(int currentMonth)
+        {
+            int returnValue = 0;
+
+            if (currentMonth <= 4)
+                returnValue = 4 - currentMonth;
+            else
+            {
+                returnValue = 16 - currentMonth;
+            }
+            
+            return (returnValue==0?12:returnValue);
+        }
         protected void BtnReset_Click(object sender, EventArgs e)
         {
             txtempid.Text = "";
