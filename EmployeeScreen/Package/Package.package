@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="ad85ac82-4567-4dea-b797-7931b0573e4e" solutionId="ad85ac82-4567-4dea-b797-7931b0573e4e" resetWebServer="false" name="EmployeeScreen" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="160956a3-7f76-4354-bd65-52e0cd25d336" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="be3280cd-9722-4f0a-b246-93b895f1bc1c" />
+  </projectItems>
+</package>

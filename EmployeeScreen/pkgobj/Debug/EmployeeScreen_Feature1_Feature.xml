@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="1db67fb2-0d32-467e-84e5-3bb96a0313aa" Scope="Site" Title="EmployeeScreen Feature1">
+  <ElementManifests>
+    <ElementManifest Location="EmployeeScreen\Elements.xml" />
+    <ElementFile Location="EmployeeScreen\EmployeeScreen.webpart" />
+    <ElementManifest Location="LeaveRequestForm\Elements.xml" />
+    <ElementFile Location="LeaveRequestForm\LeaveRequestForm.webpart" />
+  </ElementManifests>
+</Feature>

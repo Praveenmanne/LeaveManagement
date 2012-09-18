@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="ad85ac82-4567-4dea-b797-7931b0573e4e" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="EmployeeScreen.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="EmployeeScreen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ecb8e61697ee58b5" Namespace="EmployeeScreen.EmployeeScreen" TypeName="*" />
+        <SafeControl Assembly="EmployeeScreen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ecb8e61697ee58b5" Namespace="EmployeeScreen.LeaveRequestForm" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\EmployeeScreen\EmployeeScreen\EmployeeScreenUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\EmployeeScreen\LeaveRequestForm\LeaveRequestFormUserControl.ascx" />
+    <TemplateFile Location="Layouts\EmployeeScreen.css" />
+    <TemplateFile Location="Layouts\LeaveRequest.css" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="EmployeeScreen_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

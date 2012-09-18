@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="EmployeeScreenUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="EmployeeScreen\" Type="ElementManifest" />
+    <ProjectItemFile Source="EmployeeScreen.webpart" Target="EmployeeScreen\" Type="ElementFile" />
+    <ProjectItemFile Source="EmployeeScreenUserControl.ascx" Target="CONTROLTEMPLATES\EmployeeScreen\EmployeeScreen\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="EmployeeScreen.EmployeeScreen" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\EmployeeScreen\EmployeeScreen\bin\Debug\EmployeeScreen.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\EmployeeScreen\EmployeeScreen\bin\Debug\EmployeeScreen.pdb
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\EmployeeScreen\EmployeeScreen\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\EmployeeScreen\EmployeeScreen\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\EmployeeScreen\EmployeeScreen\obj\Debug\EmployeeScreen.dll
+C:\Users\Administrator\Documents\Visual Studio 2010\Projects\EmployeeScreen\EmployeeScreen\obj\Debug\EmployeeScreen.pdb
